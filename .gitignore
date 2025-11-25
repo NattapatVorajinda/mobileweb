@@ -23,16 +23,3 @@ logs/
 .vite/
 *.local
 
-# CRITICAL FIXES: Build Artifacts ตามแบบฝึกหัด
-# ------------------------------------------------------------------------
-# 1. Ignore โฟลเดอร์ node_modules ที่ถูกสร้างเป็น Symlink ในแต่ละแอป
-#    (ป้องกันปัญหาที่ Git อาจพยายาม Track Symlinks ภายใน apps/*)
-/apps/**/node_modules
-
-# 2. Ignore โฟลเดอร์ build/dist ที่อาจถูกสร้างขึ้นมาใน apps/*
-/apps/**/dist
-/apps/**/www
-
-# 3. Ignore โฟลเดอร์ docs ทั้งหมด
-# (เนื่องจากเอกสารระบุว่า docs/ เป็น output folder สำหรับ build)
-/docs
